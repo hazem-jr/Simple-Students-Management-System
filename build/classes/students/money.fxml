@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.MoneyController">
+   <children>
+      <TableView fx:id="tab_money" layoutX="-1.0" layoutY="81.0" prefHeight="412.0" prefWidth="818.0">
+         <columns>
+            <TableColumn fx:id="col_money" prefWidth="177.0" text="فلوس الشهر " />
+            <TableColumn fx:id="col_name" prefWidth="499.0" text="اسم الطالب " />
+            <TableColumn fx:id="col_code" prefWidth="140.0" text="كود الطالب " />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="combo" labelFloat="true" layoutX="843.0" layoutY="87.0" onAction="#getSelectedMonth" prefHeight="25.0" prefWidth="243.0" promptText="اختر الشهر " />
+      <JFXButton fx:id="save" layoutX="843.0" layoutY="152.0" onAction="#savePaymeents" prefHeight="25.0" prefWidth="243.0" style="-fx-background-color: #b4e783;" text="حفظ التغييرات " textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="r3" layoutX="234.0" layoutY="15.0" onAction="#handleRadioSelected" prefHeight="50.0" prefWidth="200.0" text="ثالث ثانوي ">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="group2" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="r2" layoutX="434.0" layoutY="15.0" onAction="#handleRadioSelected" prefHeight="50.0" prefWidth="200.0" text="ثاني ثانوي " toggleGroup="$group2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="r1" contentDisplay="RIGHT" layoutX="634.0" layoutY="15.0" onAction="#handleRadioSelected" prefHeight="50.0" prefWidth="200.0" text="اول ثانوي " toggleGroup="$group2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>

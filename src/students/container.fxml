@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="p1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.ContainerController">
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="92.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="89.0" prefWidth="874.0">
+               <children>
+                  <JFXButton fx:id="money" onAction="#handleButtonAction2" prefHeight="68.0" prefWidth="474.0" style="-fx-background-color: lightgreen;" text="فلوس الشهر ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="std" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="474.0" style="-fx-background-color: lightgreen;" text="الطلاب ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Label fx:id="lbl_msg" prefHeight="0.0" prefWidth="874.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
